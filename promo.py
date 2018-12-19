@@ -18,6 +18,7 @@ def gen(start_len,stop_len,token):
         for i in res:
             k=''.join(i)
             get_promo(token,k)
+            time.sleep(0.01)
             print(i)
 def get_promo(token,code):
     data={'_token': token,
