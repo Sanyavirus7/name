@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import itertools
+import time
 def get_html(url):
     r = s.get(url)
     return r.text
