@@ -1,1 +1,1 @@
-bot: python3 promo.py
+web: python promo.py
