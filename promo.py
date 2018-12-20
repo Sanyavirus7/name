@@ -21,10 +21,10 @@ def gen(start_len,stop_len,token):
             get_promo(token,k)
             time.sleep(0.01)
             print(i)
-def get_promo(token,code):
+async def get_promo(token,code):
     data={'_token': token,
           'coupon': code }
-    response=s.post('https://spb.pizzahut.ru/cart/coupon/activate',data=data).json()["success"]
+    response=await s.post('https://spb.pizzahut.ru/cart/coupon/activate',data=data).json()["success"]
     if response==True:
         print(code)
         send_mess(chat_id, code)
