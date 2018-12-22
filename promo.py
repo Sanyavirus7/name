@@ -21,9 +21,8 @@ def gen(start_len,stop_len,token):
             k=''.join(i)
             get_promo(token,k)
             l=l+1
-            if l==100000:
+            if l % 1000==0:
                 print(l)
-                l=l+1
 def get_promo(token,code):
     data={'_token': token,
           'coupon': code }
