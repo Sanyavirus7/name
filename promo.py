@@ -14,11 +14,16 @@ def gen(start_len,stop_len,token):
     ru = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     digits = "1234567890 "
     abc=ru
+    l=0
     for i in range(start_len,stop_len):
         res = itertools.permutations(abc ,i)
         for i in res:
             k=''.join(i)
             get_promo(token,k)
+            l=l+1
+            if l==100000:
+                print(l)
+                l=l+1
 def get_promo(token,code):
     data={'_token': token,
           'coupon': code }
