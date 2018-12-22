@@ -1,1 +1,1 @@
-web: python promo.py 
+worker: python promo.py 
