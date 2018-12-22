@@ -1,1 +1,1 @@
-web: python promo.py $PORT
+web: python promo.py 
