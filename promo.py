@@ -39,7 +39,7 @@ def send_mess(chat, text):
 url='https://api.telegram.org/bot626390266:AAEiOnfvAsaj20sMLwRJOFO82Gu56TWsPu4/'
 chat_id=-1001308921194
 print('Плехали')
-url='https://pizzahut.ru'
+url='https://spb.pizzahut.ru'
 s=requests.Session()
 token1=get_token(get_html(url))
 gen(5,6,token1)
